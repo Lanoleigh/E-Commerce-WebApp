@@ -1,0 +1,81 @@
+﻿@page
+@model ST10258321_KhumaloCrafts.Pages.Manufacturer.ManuDomainModel
+ 
+@{
+    Model.active_manufacturer = Request.Cookies["email"];
+}
+
+@Model.active_manufacturer
+
+
+    <div class="pre-orders-made">
+
+        @foreach (var item in Model.manufacturerList)
+        {
+            if (item.Email == Model.active_manufacturer)
+            {
+                foreach (var pros in Model.prodsOrdersList)
+                {
+                    <div class="product-card">
+
+
+                        @if (item.ManufacturerID == pros.ManufacturerID)
+                        {
+                            <div class="orders">
+                                @foreach (var o in Model.oList)
+                                {
+                                    if (o.OrderID == pros.OrderID)
+                                    {
+                                        <p>Order ID: @o.OrderID</p>
+                                        <p>Status: @o.Status</p>
+                                        <p>Date Ordered: @o.DateOrdered</p>
+                                    }
+                                }
+                            </div>
+                            <hr />
+                            <div class="pro-sec">
+                                @foreach (var products in Model.productsList)
+                                {
+                                    if (products.ProductID == pros.ProductID)
+                                    {
+                                        <p> ProductID: @products.ProductID</p>
+                                        <p> @products.Name </p>
+                                        <p>R @products.Price</p>
+                                        <img class="pros-img" src="@products.ProductImg" />
+                                    }
+                                }
+                            </div>
+                        }
+
+
+                    </div>
+
+
+                }
+            }
+
+        }
+        
+    </div>
+<hr />
+<h1>Processing</h1>
+
+    <div class="process-container">
+        @foreach (var item in Model.oList)
+        {
+            if (item.Status == "Processing")
+            {
+                <form method="post" asp-page-handler="Processing" class="pfrm">
+                <p> OrderID : @item.OrderID</p>
+                <p>R @item.Amount </p>
+                <p> Number Of Items:  @item.NumOfItems</p>
+                    <input type="hidden" class="oID" name="orderId" value="@item.OrderID"/>
+                    <input name="processInput" type="text" placeholder="Approved"/>
+                    <button type="submit"class="sub-btn">Process</button>
+                </form>
+            }
+        }
+    </div>
+
+
+

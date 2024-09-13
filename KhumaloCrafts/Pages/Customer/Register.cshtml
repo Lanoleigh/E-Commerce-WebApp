@@ -1,0 +1,38 @@
+﻿@page
+@model ST10258321_KhumaloCrafts.Pages.Customer.RegisterModel
+@{
+}
+<form class="frm" method="post">
+    <h2>Register</h2>
+    <div class="reg">
+        <input type="text" class="name in" name="name" placeholder="First Name" value="@Model.customer.CustomerName" />
+    </div>
+    <div class="reg">
+        <input type="text" class="sur in" name="surname" placeholder="Surname" value="@Model.customer.CustomerSurname" />
+    </div>
+    <div class="reg">
+        <input type="email" class="email in" name="email" placeholder="Email" value="@Model.customer.CustomerEmail" />
+    </div>
+    <div class="reg">
+        <input type="password" class="pass in" name="password" placeholder="Password" value="@Model.customer.Password" />
+    </div>
+    <hr />
+    @if(Model.sMsg.Length > 0)
+    {
+        <div class="sMsgAlert">
+            <strong class="msg">@Model.sMsg</strong>
+        </div>
+    }
+    @if (Model.errorMsg.Length > 0)
+    {
+        <div class="errMsg">
+            <strong>@Model.errorMsg</strong>
+        </div>
+    }
+
+    <div class="btn-container">
+        <button type="submit" class="sub-btn">Register</button>
+    </div>
+
+
+</form>

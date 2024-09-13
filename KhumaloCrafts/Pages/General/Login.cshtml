@@ -1,0 +1,84 @@
+﻿@page
+@model ST10258321_KhumaloCrafts.Pages.General.LoginModel
+@{ 
+}
+@if(Model.IsCusLoggedIn == false && Model.IsManULoggedIn == false)
+{
+    <form method="post" class="login-form">
+        <div>
+            <h2 class="log-heading">Login</h2>
+        </div>
+        <div>
+            <input asp-for="email" class="log email-in" id="email" name="email" placeholder="email address" type="email" />
+        </div>
+        <div>
+            <input asp-for="password" class="log password" name="password" placeholder="Password" type="password" />
+        </div>
+        <hr />
+        <button class="logBtn"  type="submit">Login</button>
+    
+    </form>
+}
+else if(Model.IsCusLoggedIn == true && Model.IsManULoggedIn ==false)
+{
+    <div class="customer-details-panel">
+        <h2>Customer Details</h2>
+        <p>@Model.customer.activeCustomer.CustomerName @Model.customer.activeCustomer.CustomerSurname</p>
+        <p>@Model.customer.activeCustomer.CustomerEmail</p>
+    </div>
+    <div class="order-history">
+        <h3>Order History</h3>
+        @foreach(var item in Model.oList)
+        {
+            if(item.CustomerID == Model.customer.activeCustomer.CustomerID)
+            {
+                <div class="cust-orders">
+                    <p>Order Number: @item.OrderID</p>
+                    <p>Status: @item.Status</p>
+                    <p>Date Ordered: @item.DateOrdered</p>
+                    <p>R @item.Amount</p>
+                    <p>Number of Items: @item.NumOfItems</p>
+                </div>
+            }
+        }
+    </div>
+    <hr />
+    <div>
+        <a class="orderNewBtn btn-sub" asp-page="Work">Go Order something new...</a>
+    </div>
+}
+@if (Model.IsManULoggedIn == true && Model.IsCusLoggedIn == false)
+{
+    <div class="man-details">
+        <h2>Manufacturer Details</h2>
+        <p>ID: @Model.manuA.activeMan.ManufacturerID</p>
+        <p>Name: @Model.manuA.activeMan.ManName</p>
+        <p>Email: @Model.manuA.activeMan.Email</p>
+    </div>
+    <div class="products-display">
+        @foreach(var item in Model.pros)
+        {
+            if(item.ManufacturerID == Model.manuA.activeMan.ManufacturerID)
+            {
+                <div class="products-made">
+                    <span class="pro-span">
+                        <p>Product ID: @item.ProductID</p>
+                        <p>Name: @item.Name</p>
+                        <p>Category @item.Category</p>
+                        <p>Price: R @item.Price</p>
+                    </span>
+
+                    <img class="pros-img" src="@item.ProductImg"/>
+                </div>
+
+            }
+        }
+        <a asp-area="" asp-page="/Manufacturer/ManuDomain">View what products were bought</a>
+    </div>
+}
+@if (Model.loginMessage.Length > 0)
+{
+    <div class="errMsg">
+        <strong>@Model.loginMessage</strong>
+    </div>
+}

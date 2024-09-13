@@ -1,0 +1,18 @@
+﻿@page
+@model CustomerDomainModel
+@{
+     Model.active_id = Request.Cookies["active_ID"];
+}
+@foreach (var item in Model.orderList)
+{
+    if (item.CustomerID == Int32.Parse(Model.active_id))
+    {
+        <div class="cust-orders">
+            <p>Order Number: @item.OrderID</p>
+            <p>Status: @item.Status</p>
+            <p>Date Ordered: @item.DateOrdered</p>
+            <p>R @item.Amount</p>
+            <p>Number of Items: @item.NumOfItems</p>
+        </div>
+    }
+}

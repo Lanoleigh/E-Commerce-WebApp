@@ -1,0 +1,69 @@
+﻿@page
+@model ST10258321_KhumaloCrafts.Pages.General.WorkModel
+@{
+}
+<div class="work-container">
+    @Model.active_user
+
+    <div class="catalogue" id="cartItems">
+        @foreach (var item in Model.productList)
+        {
+            <div class="product-card">
+                <img class="product-imgs" src="@item.ProductImg" />
+                <div class="product-info">
+                    <h3 class="product-heading">@item.Name</h3>
+                    <p class="product-desc">@item.Description</p>
+                    <p class="category">Category: @item.Category</p>
+                    <input asp-for="quantity" type="number" name="quantity" placeholder="1" min="1" class="numOfItems" />
+                    <hr class="underline" />
+                    <p class="price">R @item.Price</p>
+                    <form method ="post" class="addToCartForm" asp-page-handler="Purchase">
+                        <input type="hidden" name="productID" value="@item.ProductID" />
+                        <button class="add-cart-btn" type="submit">Add To Cart</button>
+                    </form>
+                </div>
+            </div>
+            <hr />
+        }
+    </div>
+
+    <a asp-page="/Customer/CustomerDomain">Lets go see my order</a>
+</div>
+@if(Model.cartItemsList.Count > 0)
+{
+    @foreach(var item in Model.cartItemsList)
+    {
+        <p>@item.Name</p>
+        <img src="@item.ProductImg"/>
+    }
+}
+@* <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var forms = document.querySelectorAll('.addToCartForm');
+        forms.forEach(function (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var formData = new FormData(form);
+                var productId = form.querySelector('button[data-product-id]').getAttribute('data-product-id');
+                var button = form.querySelector('button[data-product-id]');
+
+                fetch('/Work?handler=AddToCart', {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            button.style.backgroundColor = 'green';
+                            console.log("Added successfully");
+                        } else {
+                            console.error('Failed attempt to add product to cart');
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Errors: ", error);
+                    });
+            });
+        });
+    });
+</script>
+ *@

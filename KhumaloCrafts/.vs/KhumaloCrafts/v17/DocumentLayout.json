@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Applications\\ST10258321_KhumaloCrafts\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ABC15986-6BE9-4BA2-80DC-E575513F3A6B}|KhumaloCrafts.csproj|c:\\applications\\st10258321_khumalocrafts\\pages\\general\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ABC15986-6BE9-4BA2-80DC-E575513F3A6B}|KhumaloCrafts.csproj|solutionrelative:pages\\general\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABC15986-6BE9-4BA2-80DC-E575513F3A6B}|ST10258321_KhumaloCrafts.csproj|c:\\applications\\st10258321_khumalocrafts\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ABC15986-6BE9-4BA2-80DC-E575513F3A6B}|ST10258321_KhumaloCrafts.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Applications\\ST10258321_KhumaloCrafts\\Pages\\General\\About.cshtml",
+              "RelativeDocumentMoniker": "Pages\\General\\About.cshtml",
+              "ToolTip": "C:\\Applications\\ST10258321_KhumaloCrafts\\Pages\\General\\About.cshtml",
+              "RelativeToolTip": "Pages\\General\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T19:01:55.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Applications\\ST10258321_KhumaloCrafts\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Applications\\ST10258321_KhumaloCrafts\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwA0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-13T18:34:37.787Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

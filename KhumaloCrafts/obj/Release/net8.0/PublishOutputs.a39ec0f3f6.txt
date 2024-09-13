@@ -1,0 +1,17 @@
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\ST10258321_KhumaloCrafts.exe
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\ST10258321_KhumaloCrafts.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\ST10258321_KhumaloCrafts.runtimeconfig.json
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\ST10258321_KhumaloCrafts.pdb
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\System.Data.SqlClient.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\runtimes\win-arm64\native\sni.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\runtimes\win-x64\native\sni.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\runtimes\win-x86\native\sni.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Applications\ST10258321_KhumaloCrafts\obj\Release\net8.0\PubTmp\Out\ST10258321_KhumaloCrafts.deps.json
